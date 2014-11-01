@@ -1,0 +1,105 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <TextView
+        android:id="@+id/initial_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="16dp"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="42dp"
+        android:text="@string/Initial_Investment_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/years_text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/initial_text"
+        android:layout_alignStart="@+id/initial_text"
+        android:layout_below="@+id/initial_text"
+        android:layout_marginTop="54dp"
+        android:text="@string/Years_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Spinner
+        android:id="@+id/spinner1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignTop="@+id/years_text"
+        android:layout_toRightOf="@+id/initial_text" 
+        android:layout_toEndOf="@+id/initial_text" 
+        
+        />
+    
+    <EditText
+        android:id="@+id/initial_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/initial_text"
+        android:layout_toEndOf="@+id/initial_text"
+        android:layout_toRightOf="@+id/initial_text"
+        android:ems="8"
+        android:digits="0123456789.+-"
+        android:hint="@string/initial_message"
+        android:inputType="numberDecimal" >
+
+        <requestFocus />
+       
+    </EditText>
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/years_text"
+        android:layout_alignStart="@+id/years_text"
+        android:layout_centerVertical="true"
+        android:text="@string/Interest_title"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/btnCalculate"
+        android:enabled = "false"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="34dp"
+        android:layout_toLeftOf="@+id/spinner1"
+        android:layout_toStartOf="@+id/spinner1"
+        android:text="@string/btn_text" />
+
+    <EditText
+        android:id="@+id/interest_edit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignTop="@+id/textView3"
+        android:ems="6"
+        android:digits="0123456789.+-"
+        android:inputType="numberDecimal" />
+
+    <EditText
+        android:id="@+id/answerBlock"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/btnCalculate"
+        android:layout_alignLeft="@+id/textView3"
+        android:layout_marginBottom="52dp"
+        android:ems="15"
+        android:inputType="numberDecimal" 
+        android:ellipsize="start"
+    	android:gravity="center_horizontal"
+        android:hint="@string/initial_message"
+        />
+    	
+
+</RelativeLayout>
